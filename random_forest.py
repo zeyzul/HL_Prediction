@@ -22,6 +22,7 @@ np.reshape(HUMAN_Y, 12929)  # ROW SIZE OF HUMAN DATA: 12929 / ROW SIZE OF MOUSE 
 # MOUSE_Y_BERT = np.load('MOUSE_EMBEDDINGSY.npy')
 # np.reshape(MOUSE_Y_BERT, 13717)
 
+
 train_x, test_x, train_y, test_y = train_test_split(HUMAN_X, HUMAN_Y, test_size=0.25, random_state=42)
 
 print('Training Human Features Shape:', train_x.shape)
