@@ -5,7 +5,6 @@ import numpy as np
 
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 
-
 # THE ORF VALUES
 def create_seq_list(HL_df):
     seq_values = []
