@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 
 # CHANGE THE FILE MANUALLY: 'Human_HL_ORF.csv' / 'Mouse_HL_ORF.csv'
-data = pd.read_csv('Mouse_HL_ORF.csv')
+data = pd.read_csv('Human_HL_ORF.csv')
 
 ORF_values = data["ORF"].values
 
@@ -42,8 +42,8 @@ HL_values = HL_values.to_numpy()
 
 
 # CHANGE FILE NAMES MANUALLY: "HUMAN_X.npy" - "HUMAN_Y.npy" / "MOUSE_X.npy" - "MOUSE_Y.npy"
-file_name_x = "MOUSE_X.npy"
-file_name_y = "MOUSE_Y.npy"
+file_name_x = "HUMAN_X.npy"
+file_name_y = "HUMAN_Y.npy"
 
 np.save(file_name_x, converted)
 np.save(file_name_y, HL_values)
