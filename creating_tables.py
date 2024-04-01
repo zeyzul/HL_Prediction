@@ -1,6 +1,6 @@
 import pandas as pd
 
-headers = ["ENSID", "HALFLIFE", "ORF"]
+headers = ["HALFLIFE", "ORF"]
 
 # LOAD DATA
 df_mouse = pd.read_csv("all_HLs_mouse_featTable.txt", sep="\t")
@@ -26,8 +26,8 @@ for i, row in df_human.iterrows():
 df_human = df_human.drop(12587).reset_index()
 
 # FOR FASTER RESULTS, A SAMPLE FROM DATA CAN ALSO BE USED
-# df_human = df_human.sample(n=1000)
-# df_mouse = df_mouse.sample(n=1000)
+df_human = df_human.sample(n=1000)
+df_mouse = df_mouse.sample(n=1000)
 
 df_mouse.to_csv('Mouse_HL_ORF.csv', index = None, columns=headers)
 df_human.to_csv('Human_HL_ORF.csv', index = None, columns=headers)
