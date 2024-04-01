@@ -41,7 +41,7 @@ HL_values = data["HALFLIFE"]
 HL_values = HL_values.to_numpy()
 
 
-# CHANGE FILE NAMES MANUALLY: "HUMAN_X.npy" - "HUMAN_Y.npy" / "MOUSE_X.npy" - "MOUSE_Y.npy"
+# CHANGE FILE NAMES MANUALLY: "HUMAN_X.npy" - "HUMAN_Y.npy" / "MOUSE_X.npy" - "MOUSE_Y.npy"*
 file_name_x = "HUMAN_X.npy"
 file_name_y = "HUMAN_Y.npy"
 
