@@ -6,13 +6,13 @@ from sklearn.metrics import mean_absolute_error
 from sklearn.metrics import r2_score
 
 
-HUMAN_X = np.load('HUMAN_X.npy')
-HUMAN_Y = np.load('HUMAN_Y.npy')
-np.reshape(HUMAN_Y, 12929)  # ROW SIZE OF HUMAN DATA: 12929 / ROW SIZE OF MOUSE DATA: 13717 OR MANUALLY SELECTED
+# HUMAN_X = np.load('HUMAN_X.npy')
+# HUMAN_Y = np.load('HUMAN_Y.npy')
+# np.reshape(HUMAN_Y, 12928)  # ROW SIZE OF HUMAN DATA: 12929 / ROW SIZE OF MOUSE DATA: 13717 OR MANUALLY SELECTED
 
-# HUMAN_X_BERT = np.load('HUMAN_EMBEDDINGSX.npy')
-# HUMAN_Y_BERT = np.load('HUMAN_EMBEDDINGSY.npy')
-# np.reshape(HUMAN_Y_BERT, 12929)
+HUMAN_X_BERT = np.load('HUMAN_EMBEDDINGSX.npy')
+HUMAN_Y_BERT = np.load('HUMAN_EMBEDDINGSY.npy')
+np.reshape(HUMAN_Y_BERT, 12928)
 
 # MOUSE_X = np.load('MOUSE_X.npy')
 # MOUSE_Y = np.load('MOUSE_Y.npy')
@@ -23,7 +23,7 @@ np.reshape(HUMAN_Y, 12929)  # ROW SIZE OF HUMAN DATA: 12929 / ROW SIZE OF MOUSE 
 # np.reshape(MOUSE_Y_BERT, 13717)
 
 
-train_x, test_x, train_y, test_y = train_test_split(HUMAN_X, HUMAN_Y, test_size=0.25, random_state=42)
+train_x, test_x, train_y, test_y = train_test_split(HUMAN_X_BERT, HUMAN_Y_BERT, test_size=0.25, random_state=42)
 
 print('Training Human Features Shape:', train_x.shape)
 print('Training Human Labels Shape:', train_y.shape)
